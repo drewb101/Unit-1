@@ -1,22 +1,19 @@
 def course_grader(test_scores):
-    # Your code here
-    if avg_score(test_scores) >= 70:
-        for score in test_scores:
-            whille
-            return "pass"
-        else:
-            return "fail"
-
-
-def avg_score(test_scores):
     sum = 0
     n = 0
+
     for score in test_scores:
         sum = sum + score
         n += 1
-        avg = sum / n
+        if score < 50:
+            return "fail"
 
-    return avg
+    avg_score = sum / n
+
+    if avg_score >= 70:
+        return "pass"
+    else:
+        return "fail"
 
 
 def main():
