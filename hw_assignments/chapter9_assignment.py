@@ -8,4 +8,4 @@ def analyze_text(text):
     return message
 
 
-print(analyze_text("How are you doing today kind sirs & pretty ladies?"))
+print(analyze_text("How are you doing today?")
