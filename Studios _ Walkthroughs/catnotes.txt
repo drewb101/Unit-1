@@ -1,0 +1,31 @@
+has-a's:
+------------
+
+tail - object?
+hair length - float
+color
+paws
+attitude
+*name - string
+*hair quantity - int
+birthdate - date
+number of whiskers - int
+number of teeth - int
+stomach
+*number of lives - int
+*voice - string
+
+
+behaviors
+----------
+sleep(howLong)
+pounce
+eat(food, howMuch)
+climb
+*meow
+groom
+purr
+*shed(howMuch)
+play
+death
+smack with tail
