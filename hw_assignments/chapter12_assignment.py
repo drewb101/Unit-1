@@ -1,10 +1,15 @@
-# TODO: add the Car class
+class Car:
+    
+    def __init__(self, gas_level_x):
+        self.x = gas_level_x
 
+    def add_gas(self, gas):
+        self.x += gas
 
-# some tests to check your code, Do Not Post These in Vocareum
-from test import testEqual
-testEqual( Car(10).fill_up(), 3 )
-testEqual( Car(20).fill_up(), 0 )
-testEqual( Car(5.5).fill_up(), 7.5 )
-testEqual( Car(12.5).fill_up(), 0.5 )
-testEqual( Car(13).fill_up(), 0 )
+    def fill_up(self):
+        added = 13-self.x
+        self.add_gas(added)
+
+        if added > 0:
+            return added
+        return 0

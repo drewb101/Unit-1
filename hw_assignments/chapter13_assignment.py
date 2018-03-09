@@ -14,3 +14,35 @@ class Chatbot:
 
 
 # TODO define a class called BoredChatbot
+class BoredChatbot(Chatbot):
+    """Same as Chatbot but gets bored easily"""
+
+    def __init__(self, name):
+        Chatbot.__init__(self, name)
+        self.name = name
+
+    def getsbored(self):
+        return """zzz... Oh excuse me, I dozed off reading your essay"""
+
+    def response(self, prompt_from_human):
+        if len(prompt_from_human) <= 20:
+            return BoredChatbot.getsbored()
+        else:
+            return Chatbot.response(self, prompt_from_human)
+
+
+
+
+# make a chatbot
+sally = Chatbot("Sally")
+# introduce the chatbot and allow the user to say something
+human_message = input(sally.greeting())
+# respond to the user
+print(sally.response(human_message))
+
+#make a BoredChatbot
+doug = BoredChatbot("Doug")
+#introduce the rude lil bastarddf
+human_message = input(doug.greeting())
+#respond to the user
+print(doug.response(human_message))
